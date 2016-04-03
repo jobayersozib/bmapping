@@ -9,7 +9,7 @@ var bps_obj={
     create_node:function(e){
         
          if( e.target.nodeName==='LINE' || e.target.parentNode.nodeName==="svg" ){
-                alert(e.target.nodeName);
+              
                  e.target.parentNode.removeChild(e.target);
                 }
             else{
