@@ -71,7 +71,13 @@ body{
     height: 500px;
     background-color: blanchedalmond;
 }
-
+#canvas form{
+    margin-top: 5px;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
 #canvas h1{
     font-family: sans-serif;
     font-size: 2em;
@@ -84,7 +90,7 @@ body{
     font-style: italic;
 }
 #canvas #mysvg{
-    width: 90%;
+    width:70%;
     height:85%;
     background-color: cadetblue;
     margin-left:55px;
@@ -121,4 +127,12 @@ body{
 }
 #shapes a:last-child{
      border-right:none;
+}
+
+#svg{
+    position:relative;
+}
+line{
+    z-index: 1;
+    position: absolute;
 }

@@ -13,15 +13,30 @@ and open the template in the editor.
     </head>
     <body>
         
+        
         <div id="canvas">
             <h1>Draw your map inside the box below</h1>
-            <svg id="mysvg">
-              
+            <svg  id="mysvg">
+               
+               
             </svg>
+            <form>
+                <h1>Connect Node</h1>
+                <h4>Start X:</h4>
+                <input type="text" id="SX" name=""/>
+                <h4>Start Y:</h4>
+                <input type="text" id="SY" name=""/>
+                <label for="Line End"></label>
+                <h4>End X:</h4>
+                <input type="text" id="EX"  name=""/>
+                <h4>End Y:</h4>
+                <input type="text" id="EY" name=""/>
+                <input type="button" id="submit" name=""/>
+            </form>
         </div>
+       
         <div id="shapes">
             <a href="#">Circle</a>
-            <a href="#">Path</a>
             <a href="#">Line</a>
             <a href="#" id="save">Save</a>
         </div>
