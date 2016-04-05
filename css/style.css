@@ -68,16 +68,11 @@ body{
 }
 #canvas{
     width: 100%;
-    height: 500px;
+    height:100vh;
     background-color: blanchedalmond;
+    position: relative;
 }
-#canvas form{
-    margin-top: 5px;
-    width: 20%;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 10px;
-}
+
 #canvas h1{
     font-family: sans-serif;
     font-size: 2em;
@@ -90,7 +85,7 @@ body{
     font-style: italic;
 }
 #canvas #mysvg{
-    width:70%;
+    width:65%;
     height:85%;
     background-color: cadetblue;
     margin-left:55px;
@@ -129,10 +124,26 @@ body{
      border-right:none;
 }
 
-#svg{
-    position:relative;
+#mposition{
+    width:25%;
+    background-color:inherit;
+    display:inline-block;
+    vertical-align:top;
+    margin-left: 10px;
 }
-line{
+#mposition h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+circle{
     z-index: 1;
-    position: absolute;
+}
+#maptext{
+    overflow:scroll;
+    width:100%;
+    height:120px;
+    display: inline-block;
+    
 }
