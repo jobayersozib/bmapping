@@ -14,25 +14,37 @@ var bps_obj={
      this function will call if click event occur inside canvas area. this function will create circle and remove 
      both line and circle in canvas area.
     */
-   
-    create_node:function(e){
+    set_node_name:"",
+    get_node_name:function(x){
+        bps_obj.set_node_name=x;
+    },
+   create_node:function(e){
         
-         if( e.target.nodeName==='LINE' || e.target.parentNode.nodeName==="svg" ){
-              
+         if( e.target.nodeName==='LINE' ||e.target.nodeName==="TEXT" || e.target.parentNode.nodeName==="svg" ){
+             
+                if(confirm("Do you want to remove the "+e.target.nodeName)){                  
                  e.target.parentNode.removeChild(e.target);
+                   }
                 }
             else{
              
                     var svg=document.getElementById("mysvg");
                     var svgNS = svg.namespaceURI;
                     var el=document.createElementNS(svgNS,'circle');
+                   
+                    
+                    
                     el.setAttribute("cx",e.clientX-55);
                     el.setAttribute("cy",e.clientY-50);
-                    el.setAttribute("r",10);
+                    el.setAttribute("name",document.getElementsByTagName("circle").length);
+                    el.setAttribute("r",30);
                     el.setAttribute("stroke","black");
                     el.setAttribute("stroke-width",3);
                     el.setAttribute("fill","red");
                     svg.appendChild(el);
+                    
+                    
+                    
                 }
     },
     
@@ -42,7 +54,7 @@ var bps_obj={
      this function will call if click event occur inside canvas area. this function will create line.
     */
     create_line:function(e){
-                    
+              
                     var svg=document.getElementById("mysvg");
                     var svgNS = svg.namespaceURI;
                     var el=document.createElementNS(svgNS,'line');
@@ -58,10 +70,31 @@ var bps_obj={
                      el.setAttribute("stroke","black");
                     el.setAttribute("stroke-width",3);
                     svg.appendChild(el);
+              
+                  
      
 
+    },
+    node_name:function(){
+        
+        var svg=document.getElementById("mysvg");
+        var svgNS = svg.namespaceURI;
+        var itext=document.createElementNS(svgNS,"text");
+        itext.textContent=bps_obj.set_node_name;
+        itext.setAttribute("x",bps_obj.returnX());
+       itext.setAttribute("y",bps_obj.returnY());
+       itext.setAttribute("text-align","center");
+        //alert(this.returnX());
+         svg.appendChild(itext);
+        
+        
+    },
+    returnX:function(){
+        return document.getElementById("mx").innerHTML;
+    },
+    returnY:function(){
+        return document.getElementById("my").innerHTML;
     }
-    
    
 }
     
@@ -69,6 +102,7 @@ var bps_obj={
 document.getElementById("mysvg").addEventListener("click",bps_obj.create_node,false);
 
 document.getElementById("submit").addEventListener("click",bps_obj.create_line,false);
+document.getElementById("node_name").addEventListener("click",bps_obj.node_name,false);
 
 
 
@@ -77,8 +111,15 @@ addEventListener("mousemove",function(e){
    if(e.target.nodeName==="circle"){
        var x=e.target.getAttribute("cx");
        var y=e.target.getAttribute("cy");
-    document.getElementById("mx").innerHTML="Mouse X position: "+x;
-    document.getElementById("my").innerHTML="Mouse Y position: "+y;
+       
+       bps_obj.get_node_name(e.target.getAttribute("name"));
+      
+    document.getElementById("mx").innerHTML=x;
+    document.getElementById("my").innerHTML=y;
+    
+    
+    
+    
    }
 },false);
 
