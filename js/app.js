@@ -129,3 +129,27 @@ addEventListener("load",setInterval(function(){
     document.getElementById("maptext").textContent=document.getElementById("mysvg").innerHTML;
     
 },1000));
+
+
+function search_node(){
+    var select_all_node=document.getElementsByTagName("circle");
+    var node_num=document.getElementById("search_text").value;
+    var test=false;
+   for(var i=0;i<select_all_node.length;i++){
+       if(select_all_node[i].getAttribute("name")===node_num){
+           select_all_node[i].setAttribute("fill","green");
+           test=true;
+           break;
+       }
+       
+       
+   }
+   if(!test){
+       alert("not found");
+   }
+   
+    
+}
+
+var search_button=document.getElementById("search_button");
+search_button.addEventListener("click",search_node);
