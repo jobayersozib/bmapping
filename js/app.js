@@ -36,7 +36,8 @@ var bps_obj={
                     
                     el.setAttribute("cx",e.clientX-55);
                     el.setAttribute("cy",e.clientY-50);
-                    el.setAttribute("name",document.getElementsByTagName("circle").length);
+                    el.setAttribute("name",document.getElementsByTagName("circle").length+100);
+        
                     el.setAttribute("r",30);
                     el.setAttribute("stroke","black");
                     el.setAttribute("stroke-width",3);
