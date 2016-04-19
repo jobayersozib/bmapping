@@ -63,6 +63,37 @@ table {
 /* ==========================================
 ====================Reset End==============
 */
+
+
+/*style for index.html page start*/
+
+ #header {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 3em;
+}
+
+
+#main {
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+   
+    margin-top: 15px;
+}
+#main a{
+   
+    color:black;
+    font-size: 2em;
+}
+#main form{
+    margin-top: 25px;
+}
+
+
+/*style for index.html page end*/
+
 body{
     background-color:gainsboro;
 }

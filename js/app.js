@@ -68,8 +68,8 @@ var bps_obj={
                     el.setAttribute("x2",x2);
                    
                     el.setAttribute("y2",y2);
-                     el.setAttribute("stroke","black");
-                    el.setAttribute("stroke-width",3);
+                     el.setAttribute("stroke","white");
+                    el.setAttribute("stroke-width",13);
                     svg.appendChild(el);
               
                   

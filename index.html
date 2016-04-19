@@ -1,90 +1,20 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>BPS</title>
+        <title>Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
-        
-        <div id="canvas">
-            <h1>Draw your map inside the box below</h1>
-            <ul id="top">
-                   
-                   <li>1</li>
-                   <li>2</li>
-                   <li>3</li>
-                   <li>4</li>
-                   <li>5</li>
-                   <li>6</li>
-                   <li>7</li>
-                   <li>8</li>
-                   <li>9</li>
-                   <li>10</li>
-            </ul>
-            <ul id="left">
-                   
-                   <li>1</li>
-                   <li>2</li>
-                   <li>3</li>
-                   <li>4</li>
-                   <li>5</li>
-                   <li>6</li>
-                   <li>7</li>
-                   <li>8</li>
-                   <li>9</li>
-                   <li>10</li>
-            </ul>
-            <svg  id="mysvg">
-               
-               
-            </svg>
-            <div id="mposition">
-                <form>
-                    <h1>Connect Node</h1>
-                    <h4>Line Start X:</h4>
-                    <input type="text" id="SX" name=""/>
-                    <h4>Line Start Y:</h4>
-                    <input type="text"  id="SY" name=""/>
-                    <label for="Line End"></label>
-                    <h4>Line End X:</h4>
-                    <input type="text"  id="EX"  name=""/>
-                    <h4>Line End Y:</h4>
-                    <input type="text"  id="EY" name=""/>
-                    <input type="button" id="submit" value="connect node" name=""/>
-                    <input type="text" id="search_text" placeholder="search room" >
-                    <input type="button" id="search_button" value="search"/>
-                </form>
-                <h3>Mouse X position:<span id="mx">0</span></h3>
-                <h3>Mouse Y position:<span id="my">0</span></h3>
-               <div >
-               
-            
-            
-        </div>
-       
-        <div id="shapes">
-            <a href="#" id="node_name">Node name</a>
-            <a href="#">Line</a>
-            <a href="#" id="save">Save</a>
-          
-        </div>
-        <h1>Map text content Below</h1>
-         <div id="maptext">
-               
-         </div>
-        <div>
-
+        <h1 id="header">welcome to bmapping service</h1>
+        <div id="main">
+            <h1><a href="map.html">Design your map</a></h1>
+            <form action="search.html" method="GET">
+                <input type="text" name="search" id="search_building" placeholder="Building name/number"/>
+                <input type="submit" name="submit" value="search" id="submit_building_name"/>
+            </form>
         </div>
         
-        <script type="text/javascript" src="js/app.js"></script>
-       
     </body>
 </html>
