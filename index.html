@@ -7,14 +7,32 @@
         <link type="text/css" rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1 id="header">welcome to bmapping service</h1>
         <div id="main">
+            
             <h1><a href="map.html">Design your map</a></h1>
-            <form action="search.html" method="GET">
-                <input type="text" name="search" id="search_building" placeholder="Building name/number"/>
-                <input type="submit" name="submit" value="search" id="submit_building_name"/>
+            <form id="index_form"  action="" method="">
+                
+                <input id="source" type="text" placeholder="source">
+                <input type="button" value="Find source" id="fs"/>
+                
+                <input id="destination" type="text" placeholder="Destination">
+                <input type="button" value="Find Destination" id="fd"/>
+                
+                <input type="text"  id="myText" placeholder="building name/id"/>
+                <input type="text"  id="fn" placeholder="floor_num"/>
+                <input type="button" value="search" id="submit_building_name"/>
             </form>
+            <div id="canvas">
+                <svg id="mysvg">
+            
+                </svg>
+            </div>
+           
         </div>
+        
+        
+        <script type="text/javascript" src="./js/ajax.js"></script>
+        
         
     </body>
 </html>
