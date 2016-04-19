@@ -35,10 +35,10 @@ var bps_obj={
                     
                     
                     el.setAttribute("cx",e.clientX-55);
-                    el.setAttribute("cy",e.clientY-50);
+                    el.setAttribute("cy",e.clientY-70);
                     el.setAttribute("name",document.getElementsByTagName("circle").length+100);
         
-                    el.setAttribute("r",30);
+                    el.setAttribute("r",7);
                     el.setAttribute("stroke","black");
                     el.setAttribute("stroke-width",3);
                     el.setAttribute("fill","red");
@@ -91,16 +91,17 @@ var bps_obj={
         
     },
     returnX:function(){
-        return document.getElementById("mx").innerHTML;
+        return document.getElementById("mx").innerHTML-10;
     },
     returnY:function(){
-        return document.getElementById("my").innerHTML;
+        return document.getElementById("my").innerHTML-10;
     },
     search_node:function(){
         var select_all_node=document.getElementsByTagName("circle");
          var node_num=document.getElementById("search_text").value;
         var test=false;
          for(var i=0;i<select_all_node.length;i++){
+             
             if(select_all_node[i].getAttribute("name")===node_num){
              select_all_node[i].setAttribute("fill","green");
             test=true;
@@ -153,3 +154,6 @@ addEventListener("load",setInterval(function(){
 
 var search_button=document.getElementById("search_button");
 search_button.addEventListener("click",bps_obj.search_node);
+
+
+
