@@ -10,6 +10,7 @@ if(!is_dir("../bmap/".$name)){
     mkdir("../bmap/".$name);
     if(!file_exists("../bmap/".$name."/".$floor)){
         file_put_contents("../bmap/".$name."/".$floor,htmlspecialchars_decode($content));
+        echo "success";
     }
     else{
         echo "file exists try again";
@@ -21,6 +22,7 @@ if(!is_dir("../bmap/".$name)){
 else{
     if(!file_exists("../bmap/".$name."/".$floor)){
         file_put_contents("../bmap/".$name."/".$floor,$content);
+        echo "success";
     }
     else{
         echo "file exists try again";

@@ -10,7 +10,7 @@ document.getElementById("save").addEventListener("click",function(){
     xmlhttp.onreadystatechange = function() {
      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("save").innerHTML="save";
-            
+            alert(xmlhttp.responseText);
             
         }
         else{

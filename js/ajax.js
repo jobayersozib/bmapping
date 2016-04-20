@@ -7,6 +7,7 @@ xmlhttp.onreadystatechange = function() {
    document.getElementById("mysvg").innerHTML = xmlhttp.responseText;
     document.getElementById("submit_building_name").value="Search";
  }
+ 
  else{
      document.getElementById("submit_building_name").value="Searching......";
  }
